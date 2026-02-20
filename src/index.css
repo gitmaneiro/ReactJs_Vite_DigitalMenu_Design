@@ -1,0 +1,398 @@
+/* src/styles/index.css */
+
+/* Reset y Modo Oscuro Base */
+:root {
+    --color-bg-dark: #1e1e1e; /* Fondo principal oscuro */
+    --color-bg-card: #212121; /* Fondo de las tarjetas/ítems */
+    --color-text-light: #f5f5f5; /* Texto claro */
+    --color-accent-green: rgb(95, 95, 95); /* Color de acento verde */
+    --color-border-subtle: #444; /* Borde sutil */
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--color-bg-dark);
+}
+
+ /* --- 1. Header con Imagen de Fondo y Logo --- */
+.header {
+    height: 260px; /* Altura del banner */
+    background-image: url('images/banner1.jpg'); /* REEMPLAZAR */
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+    padding: 0; /* Quitamos padding aquí */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+/* .header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+} */
+
+.header-top-bar {
+    /* La nueva banda oscura superior */
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 70% de opacidad */
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5; /* Asegura que esté por encima de la imagen */
+
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--color-text-light);
+    text-shadow: none; /* Quitamos la sombra, ya que el fondo es oscuro */
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.social-icons a {
+    color: var(--color-text-light);
+    font-size: 1.3em; /* Íconos un poco más pequeños */
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent-green);
+}
+
+
+.logo-container{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.logo-container img {
+    width: 100px; /* Tamaño del logo */
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--color-text-light);
+    object-fit: cover;
+    margin-left: 15px; /* Separación del título */
+}
+
+/* --- 2. Navbar Fijo de Categorías --- */
+/* --- 2. Navbar Fijo de Categorías SIMPLIFICADO --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-dark);
+    z-index: 10;
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    
+    /* El contenedor principal de la navegación ahora es un flexbox */
+    display: flex; 
+    align-items: center; /* Centrar verticalmente el ícono de búsqueda */
+    padding: 10px 15px 10px 15px; /* Un poco de padding a la derecha para el ícono */
+}
+
+/* Contenedor principal de pestañas (la lista UL que tiene scroll) */
+.navbar-main-list { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1; /* Permite que la lista ocupe el máximo espacio */
+    
+    /* PROPIEDADES CLAVE PARA OCULTAR LA BARRA DE SCROLL */
+    overflow-x: scroll; 
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    white-space: nowrap; 
+}
+
+/* Ocultar la barra de scroll en WebKit (Chrome, Safari) */
+.navbar-main-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilo para los enlaces/botones (sin cambios importantes aquí) */
+.navbar-main-list li {
+    flex-shrink: 0; 
+}
+
+.navbar-main-list a {
+    display: block;
+    padding: 8px 15px; 
+    text-decoration: none;
+    color: #bbb; 
+    font-size: .875rem;
+    font-weight: 500;
+    border-radius: 20px; 
+    margin: 5px 4px; 
+    transition: all 0.2s ease-in-out;
+}
+
+/* Estilo para la pestaña activa (sin cambios) */
+.navbar-main-list a.active {
+    background-color: #383838 ;
+    color: var(--color-text-light); 
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-main-list a:hover:not(.active) {
+    background-color: #383838; /* Efecto hover sutil */
+    color: var(--color-text-light); /* Aseguramos que el hover sea blanco puro */
+}
+
+/* El ícono de búsqueda se mantiene al final de la barra */
+.search-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+    cursor: pointer;
+    flex-shrink: 0; /* Asegura que no se comprima */
+}
+
+/* --- 3. Carrusel de Entradas (Section Header) --- */
+/* .carousel-section {
+    background-color: var(--color-bg-card);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: #ccc;
+}
+
+.carousel-details h3 {
+    color: var(--color-text-light);
+    margin-top: 0;
+}
+
+.carousel-details .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--color-accent-green);
+    margin-top: 10px;
+}
+
+.carousel-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.dots-container {
+    text-align: center;
+    padding-top: 15px;
+}
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+} */
+
+/* --- ESTILOS PARA EL COMPONENTE SPLIDE PERSONALIZADO --- */
+
+.carousel-container {
+    background-color: var(--color-bg-card);
+    width: 100%;
+    padding: 20px 0; /* Padding vertical, el contenido tendrá padding horizontal */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px; /* Padding horizontal dentro de la tarjeta */
+    color: #ccc;
+}
+
+.carousel-details {
+    flex-basis: 60%; /* Detalles ocupan más espacio */
+}
+
+.carousel-details h3 {
+    color: var(--color-text-light);
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.carousel-details p{
+    font-size: .890rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+    line-height: 1rem;
+}
+
+.carousel-image {
+    flex-basis: 40%; /* Imagen ocupa menos espacio */
+    text-align: right;
+}
+
+.carousel-image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.price-tag {
+    display: inline-block;
+    /* background-color: var(--color-accent-green); */
+    /* color: var(--color-bg-dark);  *//* Texto oscuro sobre verde */
+    color: var(--color-text-light);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size:.875rem ;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+/* --- Personalización de la paginación de Splide (los puntos) --- */
+
+/* Contenedor de la paginación */
+.splide__pagination {
+    bottom: -15px !important; /* Mueve los puntos más cerca del carrusel */
+}
+
+/* Puntos inactivos */
+.splide__pagination__page {
+    background: #555 !important;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 4px !important;
+    transition: background 0.3s;
+}
+
+/* Punto activo */
+.splide__pagination__page.is-active {
+    background: var(--color-accent-green) !important;
+    transform: scale(1.2) !important;
+}
+
+/* --- 4. Main Content (Sections y Items) --- */
+main {
+    padding: 0 20px;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    color: var(--color-text-light);
+    margin: 20px 0;
+    border-left: 5px solid var(--color-accent-green); /* Acenro verde */
+    padding-left: 15px;
+}
+
+/* --- Item Individual del Menú (Tarjeta Oscura) --- */
+.menu-item {
+    display: flex;
+    padding: 15px;
+    margin-bottom: 8px; /* Espacio mínimo entre ítems */
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+.item-details p {
+    font-size: .875rem;
+    color: #ccc;
+    margin: 5px 0 10px 0;
+    letter-spacing: .0178571429em;
+    line-height: 1rem;
+    opacity: 0.7;
+}
+
+.item-details .price {
+    font-size: .875rem;
+    font-weight: 900;
+    letter-spacing: .0178571429em;
+    line-height: 1.425;
+    color: var(--color-text-light);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.7em;
+    color: #777;
+    background-color: var(--color-bg-dark);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+
+
+
+@media (max-width: 800px) {
+    .app-container {
+        max-width: 100%; /* Ocupa el ancho completo */
+        margin: 0; /* Elimina cualquier margen lateral */
+    }
+}

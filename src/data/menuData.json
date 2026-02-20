@@ -1,0 +1,99 @@
+
+[
+  {
+    "category": "Entradas",
+    "slug": "entradas",
+    "items": [
+      {
+        "name": "Papas Pulled Pork",
+        "description": "Nora aereroficero cute corde de aereroficero natue...",
+        "price": 14400,
+        "image": "/images/papas-pulled-pork.jpg"
+      },{
+        "name": "Papas Pulled Pork",
+        "description": "Nora aereroficero cute corde de aereroficero natue...",
+        "price": 14400,
+        "image": "/images/papas-pulled-pork.jpg"
+      },{
+        "name": "Papas Pulled Pork",
+        "description": "Nora aereroficero cute corde de aereroficero natue...",
+        "price": 14400,
+        "image": "/images/papas-pulled-pork.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Burgers",
+    "slug": "burgers",
+    "items": [
+      {
+        "name": "Papas Pulled Pork",
+        "description": "Porca eoreroficero cute corde de aereroficero natue...",
+        "price": 11800,
+        "image": "/images/burger-1.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      }
+
+    ]
+  },
+  {
+    "category": "Pizzas",
+    "slug": "pizzas",
+    "items": [
+      {
+        "name": "Papas Pulled Pork",
+        "description": "Porca eoreroficero cute corde de aereroficero natue...",
+        "price": 11800,
+        "image": "/images/burger-1.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      },
+      {
+        "name": "Papas Curgers",
+        "description": "Perola eoreroficero cute corde de aereroficero natue...",
+        "price": 18000,
+        "image": "/images/burger-2.jpg"
+      }
+
+    ]
+  }
+]
