@@ -35,7 +35,7 @@ body {
  /* --- 1. Header con Imagen de Fondo y Logo --- */
 .header {
     height: 260px; /* Altura del banner */
-    background-image: url('images/banner1.jpg'); /* REEMPLAZAR */
+    background-image: url('/images/banner1.jpg'); /* REEMPLAZAR */
     background-size: cover;
     background-position: center 30%;
     position: relative;
